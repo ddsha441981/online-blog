@@ -7,120 +7,235 @@
 <spring:url var="images" value="/resources/images"/>
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/> 
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<script type="afb6f65314ea43a693f111de-text/javascript">
-    var host = "startbootstrap.com";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-      window.location.protocol = "https";
-  </script>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Start Bootstrap">
-<meta name="google-site-verification" content="37Tru9bxB3NrqXCt6JT5Vx8wz2AJQ0G4TkC-j8WL3kw">
 
-<title>
-    Blog Post - Template Preview - Start Bootstrap
-  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<meta name="description" content="">
+  <title>Blog Post - Start Bootstrap Template</title>
 
-<link rel="canonical" href="https://startbootstrap.com/previews/blog-post/">
+  <!-- Bootstrap core CSS -->
+  <link href="${css}/bootstrap1.min.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="${css}/blog-post.css" rel="stylesheet">
 
-<link rel="stylesheet" href="${css}/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
-
-<link rel="stylesheet" href="${css}/style-template.css">
-
-<link type="application/atom+xml" rel="alternate" href="https://startbootstrap.com/feed.xml" title="startbootstrap" />
-<script type="afb6f65314ea43a693f111de-text/javascript">
-  // Google Analytics Tracking Script
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-38417733-17', 'startbootstrap.com');
-  ga('send', 'pageview');
-</script>
-<meta name='ir-site-verification-token' value='-28223945'>
-
-<meta property="og:title" content="Blog Post - Template Preview">
-<meta property="og:site_name" content="Start Bootstrap">
-<meta property="og:type" content="website">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://startbootstrap.com/assets/img/branding/og-start-bootstrap.png">
-<meta property="og:url" content="https://startbootstrap.com/previews/blog-post/">
-<meta property="og:image:alt" content="Blog Post - Template Preview">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://startbootstrap.com/assets/img/branding/start-bootstrap-logo-500x500.png">
-<meta name="twitter:site" content="@SBootstrap">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
-<link rel="manifest" href="/assets/img/icons/site.webmanifest">
-<link rel="mask-icon" href="/assets/img/icons/safari-pinned-tab.svg" color="#dd3d31">
-<meta name="msapplication-TileColor" content="#dd3d31">
-<meta name="theme-color" content="#ffffff">
-<script type="afb6f65314ea43a693f111de-text/javascript" src="${js}/monetization.js"></script>
 </head>
-<body class="preview-page">
-<!-- <div class="preview-bar bg-white fixed-top py-2 border-bottom-primary">
-<div class="container-fluid h-100">
-<div class="row align-items-center justify-content-between h-100">
-<div class="col">
-<i class="fab fa-github text-github small"></i>
-<a class="small" href="https://github.com/BlackrockDigital/startbootstrap-blog-post">View on GitHub</a>
-</div>
-<div class="col d-none d-lg-block">
-<ul class="nav responsive-toggler justify-content-center" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" id="desktopToggle" data-toggle="tab" href="#" role="tab" aria-selected="true">
-<i class="fal fa-desktop"></i>
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="mobileToggle" data-toggle="tab" href="#" role="tab" aria-selected="false">
-<i class="fal fa-mobile"></i>
-</a>
-</li>
-</ul>
-</div>
-<div class="col text-right">
-<a href="https://github.com/BlackrockDigital/startbootstrap-blog-post/archive/gh-pages.zip" class="btn btn-primary btn-sm mr-2 d-none d-md-inline-block" onclick="if (!window.__cfRLUnblockHandlers) return false; ga('send','event','Download','click','Blog Post')" data-cf-modified-afb6f65314ea43a693f111de-="">Free Download</a>
-<a href="https://blackrockdigital.github.io/startbootstrap-blog-post/" class="btn btn-link btn-sm"><i class="fal fa-times mr-1"></i> Remove Frame</a>
-</div>
-</div>
-</div>
-</div>
- -->
- <iframe class="iframe-preview" width="100%" src="https://blackrockdigital.github.io/startbootstrap-blog-post/"></iframe>
-<script id="dsq-count-scr" src="//startbootstrap.disqus.com/count.js" async type="afb6f65314ea43a693f111de-text/javascript"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="afb6f65314ea43a693f111de-text/javascript"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous" type="afb6f65314ea43a693f111de-text/javascript"></script>
-<script type="afb6f65314ea43a693f111de-text/javascript" src="${js}/jquery.lazy.min.js"></script>
-<script type="afb6f65314ea43a693f111de-text/javascript" src="${js}/jquery.lazy.plugins.min.js"></script>
-<script src="/assets/js/scripts.js" type="afb6f65314ea43a693f111de-text/javascript"></script>
-<script type="afb6f65314ea43a693f111de-text/javascript">
-    $("#desktopToggle").on('click', function(e) {
-      e.preventDefault();
-      $(".iframe-preview").removeClass("iframe-preview-mobile");
-    });
-    $("#mobileToggle").on('click', function(e) {
-      e.preventDefault();
-      $(".iframe-preview").addClass("iframe-preview-mobile");
-    });
-  </script>
-<script src="${js}/rocket-loader.min.js" data-cf-settings="afb6f65314ea43a693f111de-|49" defer=""></script></body>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Post Title</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="#">Start Bootstrap</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+
+        <blockquote class="blockquote">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">Someone famous in
+            <cite title="Source Title">Source Title</cite>
+          </footer>
+        </blockquote>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Single Comment -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+
+        <!-- Comment with nested comments -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Search</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li>
+                    <a href="#">HTML</a>
+                  </li>
+                  <li>
+                    <a href="#">Freebies</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutorials</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Side Widget</h5>
+          <div class="card-body">
+            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="${js}/jquery.min.js"></script>
+  <script src="${js}/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
