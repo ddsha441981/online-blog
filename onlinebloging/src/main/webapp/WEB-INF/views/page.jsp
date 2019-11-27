@@ -19,6 +19,12 @@
   <meta name="author" content="">
 
   <title> Online Blog ${tittle}</title>
+  
+  <script>
+  
+  	window.menu = "${tittle}";
+  
+  </script>
 
   <!-- Bootstrap core CSS -->
   <link href="${css}/bootstrap1.min.css" rel="stylesheet">
@@ -66,6 +72,9 @@
   <!-- Bootstrap core JavaScript -->
   <script src="${js}/jquery.min.js"></script>
   <script src="${js}/bootstrap.bundle.min.js"></script>
+  
+  <!-- self coded js file -->
+  <script src="${js}/myapp.js"></script>
 
 </body>
 
