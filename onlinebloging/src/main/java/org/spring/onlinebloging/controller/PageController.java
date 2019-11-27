@@ -12,10 +12,33 @@ public class PageController {
 	public ModelAndView index() {
 
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", "Welcome to the Spring mvc");
-		
+		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
+		mv.addObject("tittle", "Home");
+		mv.addObject("userClickHome", true);
 		return mv;
 	}
+
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
+
+		ModelAndView mv = new ModelAndView("page");
+		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
+		mv.addObject("tittle", "About Us");
+		mv.addObject("userClickAbout", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+
+		ModelAndView mv = new ModelAndView("page");
+		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
+		mv.addObject("tittle", "Contact Us");
+		mv.addObject("userClickContact", true);
+		return mv;
+	}
+
+	/** for testing purpose only */
 	/*
 	 * @RequestMapping(value = "/test") public ModelAndView test(@RequestParam(value
 	 * = "greeting" , required=false) String greeting) {
@@ -26,16 +49,15 @@ public class PageController {
 	 * ModelAndView mv = new ModelAndView("page"); mv.addObject("greeting",
 	 * greeting); return mv; }
 	 */
-	
-	@RequestMapping(value = "/test/{greeting}")
-	public ModelAndView test(@PathVariable("greeting") String greeting) {
-		System.out.println("hello");
-		if(greeting == null) {
-			greeting ="Provide String first on Url with help of ?";
-		}
-		
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", greeting);
-		return mv;
-	}
+
+	/*
+	 * @RequestMapping(value = "/test/{greeting}") public ModelAndView
+	 * test(@PathVariable("greeting") String greeting) {
+	 * System.out.println("hello"); if(greeting == null) { greeting
+	 * ="Provide String first on Url with help of ?"; }
+	 * 
+	 * ModelAndView mv = new ModelAndView("page"); mv.addObject("greeting",
+	 * greeting); return mv; }
+	 */
+
 }
