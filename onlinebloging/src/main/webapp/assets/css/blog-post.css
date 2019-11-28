@@ -6,3 +6,24 @@
 body {
   padding-top: 56px;
 }
+
+html{
+	height:100%;
+}
+
+/** custom css*/
+
+.wrapper{
+	min-height: 100%;
+	position: relative;
+}
+
+.content{
+	padding-bottom: 100px;/** height of the footer 449*/
+}
+
+.footer{
+	position: absolute;
+	bottom: 0.5px;
+	height: 60px;
+}

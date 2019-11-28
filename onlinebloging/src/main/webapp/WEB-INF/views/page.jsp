@@ -29,53 +29,56 @@
   <!-- Bootstrap core CSS -->
   <link href="${css}/bootstrap1.min.css" rel="stylesheet">
 
+<!-- Bootstrap readable theme -->
+  <link href="${css}/theme-bootstrap.min.css" rel="stylesheet">
+
+
   <!-- Custom styles for this template -->
   <link href="${css}/blog-post.css" rel="stylesheet">
 
 </head>
 
 <body>
+	<div class="wrapper">
+		<!-- Navigation -->
 
-  <!-- Navigation -->
-  
-  <%@ include file="./shared/navbar.jsp" %>
-  
-  
-    <!-- Page Content -->
-  
-  
-  <!-- ..........................Loading home content here............................... -->
-  <c:if test="${userClickHome == true }">
-  		 <%@ include file="home.jsp" %>
-   </c:if>
-   
-   <!-- Load only when user clicks about -->
-   <c:if test="${userClickAbout == true }">
-  		 <%@ include file="about.jsp" %>
-   </c:if>
-   
-   <!-- Load only when user clicks contact -->
-   <c:if test="${userClickContact == true }">
-  		 <%@ include file="contact.jsp" %>
-   </c:if>
-   <!-- sidebar widgets  -->
-   
-   <%--  <%@ include file="./shared/sidebar.jsp" %> --%>
-  
-  
-    <!-- /.container -->
+		<%@ include file="./shared/navbar.jsp"%>
 
-  <!-- Footer -->
- 
- <%@ include file="./shared/footer.jsp" %>
- 
-  <!-- Bootstrap core JavaScript -->
-  <script src="${js}/jquery.min.js"></script>
-  <script src="${js}/bootstrap.bundle.min.js"></script>
-  
-  <!-- self coded js file -->
-  <script src="${js}/myapp.js"></script>
 
+		<!-- Page Content -->
+		<div class="content">
+			<!-- ..........................Loading home content here............................... -->
+			<c:if test="${userClickHome == true }">
+				<%@ include file="home.jsp"%>
+			</c:if>
+
+			<!-- Load only when user clicks about -->
+			<c:if test="${userClickAbout == true }">
+				<%@ include file="about.jsp"%>
+			</c:if>
+
+			<!-- Load only when user clicks contact -->
+			<c:if test="${userClickContact == true }">
+				<%@ include file="contact.jsp"%>
+			</c:if>
+			<!-- sidebar widgets  -->
+
+			<%--  <%@ include file="./shared/sidebar.jsp" %> --%>
+
+
+			<!-- /.container -->
+		</div>
+		<!-- Footer -->
+
+		<%@ include file="./shared/footer.jsp"%>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+
+		<!-- self coded js file -->
+		<script src="${js}/myapp.js"></script>
+	</div>
 </body>
 
 </html>
