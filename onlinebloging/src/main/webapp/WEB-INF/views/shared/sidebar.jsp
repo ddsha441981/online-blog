@@ -18,32 +18,39 @@
           <h5 class="card-header">Categories</h5>
           <div class="card-body">
             <div class="row">
+            
+            <c:forEach items="${categories}" var="category">
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#">Web Design</a>
+                    <a href="#">${category.name}</a>
                   </li>
-                  <li>
+                 <!--  <li>
                     <a href="#">HTML</a>
                   </li>
                   <li>
                     <a href="#">Freebies</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
-              <div class="col-lg-6">
+               </c:forEach>
+              <%-- <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#">JavaScript</a>
+                  <a href="#">${category.name}</a>
+                    <!-- <a href="#">JavaScript</a> -->
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#">CSS</a>
                   </li>
                   <li>
                     <a href="#">Tutorials</a>
-                  </li>
+                  </li> -->
                 </ul>
-              </div>
+              </div> --%>
+              
+             
+              
             </div>
           </div>
         </div>
@@ -55,6 +62,20 @@
             You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
           </div>
         </div>
+        
+        <!-- User Profile Card div -->
+        
+        <%-- <div class="card">
+  <img src="${images}/team2.jpg" alt="John" style="width:100%">
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <p><button>Contact</button></p>
+</div> --%>
 
       </div>
 

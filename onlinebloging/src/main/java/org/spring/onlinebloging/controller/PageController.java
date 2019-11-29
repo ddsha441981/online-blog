@@ -1,19 +1,31 @@
 package org.spring.onlinebloging.controller;
 
+import org.spring.onlineblogingbackend.dao.CategoryDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PageController {
 
+	
+	/**Dependency Injection*/
+	@Autowired
+	private CategoryDAO categoryDAO;
+	
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 
 		ModelAndView mv = new ModelAndView("page");
 		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
 		mv.addObject("tittle", "Home");
+		
+		//Passing the category list
+		mv.addObject("categories", categoryDAO.list());
+		
+		System.out.println(categoryDAO.list().toString());
+		
 		mv.addObject("userClickHome", true);
 		return mv;
 	}
