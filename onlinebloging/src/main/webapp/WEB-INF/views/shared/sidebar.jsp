@@ -23,7 +23,7 @@
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#">${category.name}</a>
+                    <a href="${contextRoot}/show/category/${category.id}/posts" id="a_${category.name}">${category.name}</a>
                   </li>
                  <!--  <li>
                     <a href="#">HTML</a>

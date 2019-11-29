@@ -1,31 +1,32 @@
 package org.spring.onlinebloging.controller;
 
+import org.sping.onlineblogingbackend.dto.Category;
 import org.spring.onlineblogingbackend.dao.CategoryDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PageController {
 
-	
-	/**Dependency Injection*/
+	/** Dependency Injection */
 	@Autowired
 	private CategoryDAO categoryDAO;
-	
+
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 
 		ModelAndView mv = new ModelAndView("page");
 		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
 		mv.addObject("tittle", "Home");
-		
-		//Passing the category list
+
+		// Passing the category list
 		mv.addObject("categories", categoryDAO.list());
-		
+
 		System.out.println(categoryDAO.list().toString());
-		
+
 		mv.addObject("userClickHome", true);
 		return mv;
 	}
@@ -47,6 +48,47 @@ public class PageController {
 		/* mv.addObject("greeting", "Welcome to the Spring mvc"); */
 		mv.addObject("tittle", "Contact Us");
 		mv.addObject("userClickContact", true);
+		return mv;
+	}
+
+	/** Methods to load all posts and based on category */
+
+	@RequestMapping(value = "/show/all/posts")
+	public ModelAndView showAllPosts() {
+
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("tittle", "All Posts");
+
+		// Passing the category list
+		mv.addObject("categories", categoryDAO.list());
+
+		mv.addObject("userClickAllPosts", true);
+		return mv;
+	}
+
+	
+	//category fetch based on id
+	@RequestMapping(value = "/show/category/{id}/posts")
+	public ModelAndView showCategoryPosts(@PathVariable("id") int id) {
+
+		ModelAndView mv = new ModelAndView("page");
+
+		// categoryDAo fetch single category
+		Category category = null;
+		category = categoryDAO.get(id);
+
+		mv.addObject("tittle", category.getName());
+
+		// Passing the category list
+		mv.addObject("categories", categoryDAO.list());
+
+		// passing the category object
+		mv.addObject("category", category);
+
+		// System.out.println(categoryDAO.list().toString());
+
+		mv.addObject("userClickCategoryPosts", true);
 		return mv;
 	}
 

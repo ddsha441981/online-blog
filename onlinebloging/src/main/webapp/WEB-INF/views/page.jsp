@@ -104,6 +104,11 @@ button:hover, a:hover {
 			<c:if test="${userClickContact == true }">
 				<%@ include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Load only when user clicks allPost and category post -->
+			<c:if test="${userClickAllPosts == true or userClickCategoryPosts == true}">
+				<%@ include file="listPosts.jsp"%>
+			</c:if>
 			<!-- sidebar widgets  -->
 
 			<%--  <%@ include file="./shared/sidebar.jsp" %> --%>
