@@ -34,7 +34,7 @@ html{
 ol.breadcrumb {
   padding: 10px 16px;
   list-style: none;
-  background-color: #fff;
+  background-color: #ff0080;
 }
 ol.breadcrumb li {
   display: inline;
@@ -42,7 +42,7 @@ ol.breadcrumb li {
 }
 ol.breadcrumb li+li:before {
   padding: 8px;
-  color: red;
+  color: black;
   content: "/\00a0";
 }
 ol.breadcrumb li a {

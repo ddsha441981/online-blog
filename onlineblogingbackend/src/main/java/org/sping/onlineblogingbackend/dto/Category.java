@@ -1,5 +1,14 @@
 package org.sping.onlineblogingbackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "category")
 public class Category {
 
 	public int getId() {
@@ -18,12 +27,12 @@ public class Category {
 		this.name = name;
 	}
 
-	public String getDescripation() {
-		return descripation;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescripation(String descripation) {
-		this.descripation = descripation;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getImageUrl() {
@@ -42,22 +51,25 @@ public class Category {
 		this.active = active;
 	}
 
-	
-	
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", descripation=" + descripation + ", imageUrl=" + imageUrl
+		return "Category [id=" + id + ", name=" + name + ", descripation=" + description + ", imageUrl=" + imageUrl
 				+ ", active=" + active + "]";
 	}
 
-
-
 	/** private Fields */
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
 	private String name;
-	private String descripation;
+
+	private String description;
+
+	@Column(name = "image_url")
 	private String imageUrl;
+
+	@Column(name = "is_active")
 	private boolean active = true;
 
 }
