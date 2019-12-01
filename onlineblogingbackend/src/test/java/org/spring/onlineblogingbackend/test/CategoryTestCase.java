@@ -33,11 +33,12 @@ public class CategoryTestCase {
 
 		System.out.println("Inside in test method");
 		category = new Category();
-		category.setId(1);
-		category.setName("Languges");
+		category.setId(0);
+		category.setName("Non Technical");
 		
-		category.setDescription("This My First Category");
-		category.setImageUrl("Cat_1.png");
+		category.setDescription("This My Second Category");
+		category.setImageUrl("Cat_2.png");
+		category.setActive(false);
 		
 		//System.out.println("++++++++++++++++++++++++" + category.getName());
 		
