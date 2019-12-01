@@ -20,31 +20,123 @@ public class CategoryTestCase {
 
 		context = new AnnotationConfigApplicationContext();
 		context.scan("org.spring.onlineblogingbackend");
-		System.out.println( );
+		System.out.println();
 		context.refresh();
 		categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
 
-		//System.out.println("Loaded successfully init method");
+		// System.out.println("Loaded successfully init method");
 
 	}
 
+	
+	/*
+	 * @Test public void testAddCategory() {
+	 * 
+	 * System.out.println("Inside in test method"); category = new Category();
+	 * category.setId(0); category.setName("Non Technical");
+	 * 
+	 * category.setDescription("This My Second Category");
+	 * category.setImageUrl("Cat_2.png"); category.setActive(false);
+	 * 
+	 * //System.out.println("++++++++++++++++++++++++" + category.getName());
+	 * 
+	 * assertEquals("Successfully added a category inside the table ", true,
+	 * categoryDAO.add(category)); }
+	 * 
+	 * 
+	 * 
+	 * @Test public void testGetCategory() {
+	 * 
+	 * category = categoryDAO.get(1);
+	 * assertEquals("Successfully fetched  a single category from the table ",
+	 * "Languges", category.getName());
+	 * 
+	 * }
+	 * 
+	 * 
+	 * 
+	 * @Test public void testupdateCategory() {
+	 * 
+	 * category = categoryDAO.get(2); category.setName("Books");
+	 * assertEquals("Successfully updated  a single category in the table ",true,
+	 * categoryDAO.update(category));
+	 * 
+	 * }
+	 * 
+	 * 
+	 * @Test public void testdeleteCategory() {
+	 * 
+	 * category = categoryDAO.get(2); category.setName("Books");
+	 * assertEquals("Successfully deleted  a single category in the table ",true,
+	 * categoryDAO.delete(category));
+	 * 
+	 * }
+	 * 
+	 * 
+	 * 
+	 * @Test public void testListCategory() {
+	 * 
+	 * category = categoryDAO.get(2); category.setName("Books");
+	 * assertEquals("Successfully fateched  categories from the table ",2,
+	 * categoryDAO.list().size());
+	 * 
+	 * }
+	 * 
+	 */
 	@Test
-	public void testAddCategory() {
+	public void testCRUDCategory() {
 
-		System.out.println("Inside in test method");
+		// add operation
+		category = new Category();
+		category.setId(0);
+		category.setName("Programming");
+		category.setDescription("This My First Category");
+		category.setImageUrl("Cat_21.png");
+		category.setActive(true);
+
+		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
+
+		category = new Category();
+		category.setId(0);
+		category.setName("Technical");
+		category.setDescription("This My Second Category");
+		category.setImageUrl("Cat_22.png");
+		category.setActive(true);
+
+		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
+
 		category = new Category();
 		category.setId(0);
 		category.setName("Non Technical");
-		
-		category.setDescription("This My Second Category");
-		category.setImageUrl("Cat_2.png");
-		category.setActive(false);
-		
-		//System.out.println("++++++++++++++++++++++++" + category.getName());
-		
-		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
-		//System.out.println("++++++++++++++++++++++++" +categoryDAO.add(category));
-		
+		category.setDescription("This My Third Category");
+		category.setImageUrl("Cat_23.png");
+		category.setActive(true);
 
+		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
+
+		category = new Category();
+		category.setId(0);
+		category.setName("Uncategorzied");
+		category.setDescription("This My Uncategorzied Category");
+		category.setImageUrl("Cat_24.png");
+		category.setActive(true);
+
+		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
+
+		// update operation
+		// fetching and updating the category
+
+		category = categoryDAO.get(2);
+		category.setName("Languges");
+		assertEquals("Successfully updated  a single category in the table ", true, categoryDAO.update(category));
+
+		// delete the category
+
+		assertEquals("Successfully deleted  a single category in the table ", true, categoryDAO.delete(category));
+
+		// fetching the list
+
+		assertEquals("Successfully fateched  categories from the table ", 3, categoryDAO.list().size());
 	}
+
 }

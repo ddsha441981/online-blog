@@ -10,3 +10,4 @@ CREATE TABLE category(
 
 );
 
+INSERT INTO category (name,description,image_url,is_active) values('Technical','This fith category','Cat25.png',true);

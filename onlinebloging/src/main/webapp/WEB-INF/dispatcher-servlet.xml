@@ -16,7 +16,7 @@
 
 
 	<context:component-scan base-package="org.spring.onlinebloging.controller"/>
-	<context:component-scan base-package="org.spring.onlineblogingbackend.daoimpl"/>
+	<context:component-scan base-package="org.spring.onlineblogingbackend"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
