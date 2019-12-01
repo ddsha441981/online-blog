@@ -1,4 +1,4 @@
-package org.sping.onlineblogingbackend.dto;
+package org.spring.onlineblogingbackend.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

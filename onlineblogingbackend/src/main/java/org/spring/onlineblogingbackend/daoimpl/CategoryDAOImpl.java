@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.sping.onlineblogingbackend.dto.Category;
 import org.spring.onlineblogingbackend.dao.CategoryDAO;
+import org.spring.onlineblogingbackend.dto.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

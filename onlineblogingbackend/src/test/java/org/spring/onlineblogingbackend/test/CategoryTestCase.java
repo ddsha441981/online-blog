@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.sping.onlineblogingbackend.dto.Category;
 import org.spring.onlineblogingbackend.dao.CategoryDAO;
+import org.spring.onlineblogingbackend.dto.Category;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class CategoryTestCase {
@@ -33,11 +33,12 @@ public class CategoryTestCase {
 
 		System.out.println("Inside in test method");
 		category = new Category();
-
+		category.setId(1);
 		category.setName("Languges");
 		
 		category.setDescription("This My First Category");
 		category.setImageUrl("Cat_1.png");
+		
 		//System.out.println("++++++++++++++++++++++++" + category.getName());
 		
 		assertEquals("Successfully added a category inside the table ", true, categoryDAO.add(category));
