@@ -87,7 +87,10 @@ public class CategoryDAOImpl implements CategoryDAO {
 		/*
 		 * // enhanced for loop for (Category category : categories) {
 		 * 
-		 * if (category.getId() == id) { return category; } }
+		 * if (category.getId() == id) {
+		 *  return category; 
+		 *  } 
+		 *  }
 		 * 
 		 * return null;
 		 */

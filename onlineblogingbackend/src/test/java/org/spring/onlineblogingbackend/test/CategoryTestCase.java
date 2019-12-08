@@ -20,7 +20,6 @@ public class CategoryTestCase {
 
 		context = new AnnotationConfigApplicationContext();
 		context.scan("org.spring.onlineblogingbackend");
-		System.out.println();
 		context.refresh();
 		categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
 
@@ -30,13 +29,16 @@ public class CategoryTestCase {
 
 	
 	/*
-	 * @Test public void testAddCategory() {
+	 * @Test 
+	 * public void testAddCategory() {
 	 * 
-	 * System.out.println("Inside in test method"); category = new Category();
-	 * category.setId(0); category.setName("Non Technical");
+	 *  category = new Category();
+	 * 	category.setId(0);
+	 *  category.setName("Non Technical");
 	 * 
 	 * category.setDescription("This My Second Category");
-	 * category.setImageUrl("Cat_2.png"); category.setActive(false);
+	 * category.setImageUrl("Cat_2.png"); 
+	 * category.setActive(false);
 	 * 
 	 * //System.out.println("++++++++++++++++++++++++" + category.getName());
 	 * 
